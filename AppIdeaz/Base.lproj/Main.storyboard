@@ -34,7 +34,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view opaque="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjp-Wr-BQ6" customClass="Checkbox" customModule="AppIdeaz" customModuleProvider="target">
+                                                <view opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hjp-Wr-BQ6" customClass="Checkbox" customModule="AppIdeaz" customModuleProvider="target">
                                                     <rect key="frame" x="374.5" y="6" width="19.5" height="27.5"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <connections>
@@ -126,12 +126,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TD8-93-wUO">
-                                <rect key="frame" x="20" y="221" width="374" height="34"/>
+                                <rect key="frame" x="20" y="121" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8h1-RW-c4M">
-                                <rect key="frame" x="71" y="355" width="272" height="39.5"/>
+                                <rect key="frame" x="71" y="402" width="272" height="39.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Save" titleAlignment="center">
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
@@ -146,23 +146,60 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUI-5u-tnx">
+                                <rect key="frame" x="20" y="175" width="374" height="42"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="is evaluated" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGp-pD-NyK">
+                                        <rect key="frame" x="167" y="8" width="90.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="center" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GQY-1U-IOj" customClass="Checkbox" customModule="AppIdeaz" customModuleProvider="target">
+                                        <rect key="frame" x="124" y="5" width="27" height="26"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="GQY-1U-IOj" secondAttribute="bottom" constant="11" id="2fc-RD-sDP"/>
+                                    <constraint firstItem="GQY-1U-IOj" firstAttribute="leading" secondItem="AUI-5u-tnx" secondAttribute="leading" constant="124" id="MON-z1-CST"/>
+                                    <constraint firstAttribute="bottom" secondItem="KGp-pD-NyK" secondAttribute="bottom" constant="13.5" id="Ub5-zR-aIC"/>
+                                    <constraint firstItem="GQY-1U-IOj" firstAttribute="top" secondItem="AUI-5u-tnx" secondAttribute="top" constant="5" id="err-p1-2IT"/>
+                                    <constraint firstItem="KGp-pD-NyK" firstAttribute="top" secondItem="AUI-5u-tnx" secondAttribute="top" constant="8" id="l0A-7K-swa"/>
+                                    <constraint firstItem="KGp-pD-NyK" firstAttribute="leading" secondItem="GQY-1U-IOj" secondAttribute="trailing" constant="16" id="v7B-gC-1o6"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c51-3m-Zao">
+                                <rect key="frame" x="20" y="244" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LR3-2y-TA1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="8h1-RW-c4M" firstAttribute="top" secondItem="c51-3m-Zao" secondAttribute="bottom" constant="124" id="22h-cd-hme"/>
                             <constraint firstItem="LR3-2y-TA1" firstAttribute="trailing" secondItem="J89-wE-oX0" secondAttribute="trailing" constant="120" id="78F-o9-7lu"/>
+                            <constraint firstItem="AUI-5u-tnx" firstAttribute="top" secondItem="TD8-93-wUO" secondAttribute="bottom" constant="20" id="9WI-FK-tAz"/>
+                            <constraint firstItem="AUI-5u-tnx" firstAttribute="leading" secondItem="LR3-2y-TA1" secondAttribute="leading" constant="20" id="Kgb-gm-3tv"/>
+                            <constraint firstItem="LR3-2y-TA1" firstAttribute="trailing" secondItem="c51-3m-Zao" secondAttribute="trailing" constant="20" id="PmJ-gX-cGX"/>
                             <constraint firstItem="J89-wE-oX0" firstAttribute="top" secondItem="LR3-2y-TA1" secondAttribute="top" constant="20" id="R55-Is-QP4"/>
+                            <constraint firstItem="LR3-2y-TA1" firstAttribute="trailing" secondItem="AUI-5u-tnx" secondAttribute="trailing" constant="20" id="RoM-Pu-XmL"/>
                             <constraint firstItem="LR3-2y-TA1" firstAttribute="trailing" secondItem="TD8-93-wUO" secondAttribute="trailing" constant="20" id="UYt-AR-Qlg"/>
+                            <constraint firstItem="c51-3m-Zao" firstAttribute="leading" secondItem="LR3-2y-TA1" secondAttribute="leading" constant="20" id="UeW-wV-ytg"/>
+                            <constraint firstItem="c51-3m-Zao" firstAttribute="top" secondItem="AUI-5u-tnx" secondAttribute="bottom" constant="27" id="X66-QT-ruY"/>
                             <constraint firstItem="LR3-2y-TA1" firstAttribute="trailing" secondItem="8h1-RW-c4M" secondAttribute="trailing" constant="71" id="YMj-Y3-qM9"/>
                             <constraint firstItem="TD8-93-wUO" firstAttribute="leading" secondItem="LR3-2y-TA1" secondAttribute="leading" constant="20" id="YRW-0T-nUe"/>
-                            <constraint firstItem="TD8-93-wUO" firstAttribute="top" secondItem="J89-wE-oX0" secondAttribute="bottom" constant="120" id="hdv-At-rFK"/>
+                            <constraint firstItem="TD8-93-wUO" firstAttribute="top" secondItem="J89-wE-oX0" secondAttribute="bottom" constant="20" id="hdv-At-rFK"/>
                             <constraint firstItem="J89-wE-oX0" firstAttribute="leading" secondItem="LR3-2y-TA1" secondAttribute="leading" constant="120" id="nYF-nX-LqI"/>
                             <constraint firstItem="8h1-RW-c4M" firstAttribute="leading" secondItem="LR3-2y-TA1" secondAttribute="leading" constant="71" id="oXI-4Y-lf8"/>
-                            <constraint firstItem="8h1-RW-c4M" firstAttribute="top" secondItem="TD8-93-wUO" secondAttribute="bottom" constant="100" id="tAe-5K-Dki"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1vS-cj-4gU"/>
                     <connections>
+                        <outlet property="Description" destination="c51-3m-Zao" id="zvd-iN-m46"/>
+                        <outlet property="checkbox22" destination="GQY-1U-IOj" id="Jwy-UU-WCp"/>
                         <outlet property="textfield" destination="TD8-93-wUO" id="cq1-Bd-Res"/>
                     </connections>
                 </viewController>
@@ -172,7 +209,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HV9-Fp-jdk"/>
+        <segue reference="B7c-Wd-SUs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>

@@ -10,9 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     
     var ideaz = [
-        Ideaz(title: "app ideas app", image: "fotiyukle.png", description: "App that can hold app ideas..."),
-        Ideaz(title: "only sum calculator", image: "fotiyukle.png", description: "takes 2 numbers and bum"),
-        Ideaz(title: "sayginlik kazanilacak", image: "rcpivdk.png", description: "2")
+        Ideaz(title: "app ideas app", isEvaluated: false, image: "fotiyukle.png", description: "App that can hold app ideas..."),
+        Ideaz(title: "only sum calculator", isEvaluated: false, image: "fotiyukle.png", description: "takes 2 numbers and bum"),
+        Ideaz(title: "sayginlik kazanilacak", isEvaluated: false, image: "rcpivdk.png", description: "3")
     ]
 
     @IBOutlet weak var tableView: UITableView!
@@ -78,8 +78,6 @@ extension ViewController: UITableViewDataSource { //bunu ezberle
     }
     
     
-    
-    
 }
 
 extension ViewController: CheckTableViewCellDelegate {
@@ -119,7 +117,7 @@ extension ViewController: UITableViewDelegate {
     }
 }
 
-extension ViewController: IdeaViewControllerDelegate {
+extension ViewController: IdeaViewControllerDelegate { 
   
   func ideaViewController(_ vc: IdeaViewController, didSaveIdea idea: Ideaz) {
     
