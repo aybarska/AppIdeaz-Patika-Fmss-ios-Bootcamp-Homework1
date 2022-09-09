@@ -34,7 +34,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hjp-Wr-BQ6" customClass="Checkbox" customModule="AppIdeaz" customModuleProvider="target">
+                                                <view opaque="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjp-Wr-BQ6" customClass="Checkbox" customModule="AppIdeaz" customModuleProvider="target">
                                                     <rect key="frame" x="374.5" y="6" width="19.5" height="27.5"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <connections>
@@ -130,16 +130,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8h1-RW-c4M">
-                                <rect key="frame" x="71" y="402" width="272" height="39.5"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Save" titleAlignment="center">
-                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="save:" destination="a2z-yt-gh5" eventType="touchUpInside" id="IPR-HL-OTZ"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IDEA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J89-wE-oX0">
                                 <rect key="frame" x="120" y="64" width="174" height="37"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
@@ -149,14 +139,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUI-5u-tnx">
                                 <rect key="frame" x="20" y="175" width="374" height="42"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="is evaluated" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGp-pD-NyK">
-                                        <rect key="frame" x="167" y="8" width="90.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is evaluated" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGp-pD-NyK">
+                                        <rect key="frame" x="159.5" y="8" width="90.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="center" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GQY-1U-IOj" customClass="Checkbox" customModule="AppIdeaz" customModuleProvider="target">
-                                        <rect key="frame" x="124" y="5" width="27" height="26"/>
+                                    <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="GQY-1U-IOj" customClass="Checkbox" customModule="AppIdeaz" customModuleProvider="target">
+                                        <rect key="frame" x="124" y="5" width="19.5" height="26"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
@@ -175,11 +165,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8h1-RW-c4M">
+                                <rect key="frame" x="71" y="324" width="272" height="39.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="save:" destination="a2z-yt-gh5" eventType="touchUpInside" id="IPR-HL-OTZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LR3-2y-TA1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="8h1-RW-c4M" firstAttribute="top" secondItem="c51-3m-Zao" secondAttribute="bottom" constant="124" id="22h-cd-hme"/>
                             <constraint firstItem="LR3-2y-TA1" firstAttribute="trailing" secondItem="J89-wE-oX0" secondAttribute="trailing" constant="120" id="78F-o9-7lu"/>
                             <constraint firstItem="AUI-5u-tnx" firstAttribute="top" secondItem="TD8-93-wUO" secondAttribute="bottom" constant="20" id="9WI-FK-tAz"/>
                             <constraint firstItem="AUI-5u-tnx" firstAttribute="leading" secondItem="LR3-2y-TA1" secondAttribute="leading" constant="20" id="Kgb-gm-3tv"/>
@@ -191,6 +190,7 @@
                             <constraint firstItem="c51-3m-Zao" firstAttribute="top" secondItem="AUI-5u-tnx" secondAttribute="bottom" constant="27" id="X66-QT-ruY"/>
                             <constraint firstItem="LR3-2y-TA1" firstAttribute="trailing" secondItem="8h1-RW-c4M" secondAttribute="trailing" constant="71" id="YMj-Y3-qM9"/>
                             <constraint firstItem="TD8-93-wUO" firstAttribute="leading" secondItem="LR3-2y-TA1" secondAttribute="leading" constant="20" id="YRW-0T-nUe"/>
+                            <constraint firstItem="8h1-RW-c4M" firstAttribute="top" secondItem="c51-3m-Zao" secondAttribute="bottom" constant="46" id="bDv-ID-cef"/>
                             <constraint firstItem="TD8-93-wUO" firstAttribute="top" secondItem="J89-wE-oX0" secondAttribute="bottom" constant="20" id="hdv-At-rFK"/>
                             <constraint firstItem="J89-wE-oX0" firstAttribute="leading" secondItem="LR3-2y-TA1" secondAttribute="leading" constant="120" id="nYF-nX-LqI"/>
                             <constraint firstItem="8h1-RW-c4M" firstAttribute="leading" secondItem="LR3-2y-TA1" secondAttribute="leading" constant="71" id="oXI-4Y-lf8"/>

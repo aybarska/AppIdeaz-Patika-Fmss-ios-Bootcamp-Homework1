@@ -16,6 +16,7 @@ class IdeaViewController: UIViewController {
     @IBOutlet weak var textfield: UITextField!
     @IBOutlet weak var checkbox22: Checkbox!
     @IBOutlet weak var Description: UITextField!
+   // @IBOutlet weak var uploadedImage: UIImageView!
     
     var idea: Ideaz?
     weak var delegate: IdeaViewControllerDelegate?
@@ -25,10 +26,12 @@ class IdeaViewController: UIViewController {
       super.viewDidLoad()
 
         textfield.text = idea?.title
-        checkbox22.checked = idea!.isEvaluated //bu niye forced derste sorulacak
+        checkbox22.checked = idea?.isEvaluated ?? false//bu niye forced derste sorulacak
         Description.text = idea?.description
+        //uploadedImage.image = UIImage(named: idea?.image ?? "1")
        // print(idea!.isEvaluated) //geliyr
        // print(checkbox22.checked) //dogru
+
     }
 
     @IBAction func save(_ sender: Any) {
@@ -37,10 +40,11 @@ class IdeaViewController: UIViewController {
             self.dismiss(animated: true, completion: nil)
             
         } else {
-            let idea = Ideaz(title: textfield.text!, isEvaluated: checkbox22.checked, image: "", description: Description.text ?? "default value")
+            let idea = Ideaz(title: textfield.text!, isEvaluated: checkbox22.checked, image: idea?.image ?? "1", description: Description.text ?? "default value")
           //  let idea = Ideaz(title: "", image: "", description: "")
             delegate?.ideaViewController(self, didSaveIdea: idea)
         }
 
     }
+
 }

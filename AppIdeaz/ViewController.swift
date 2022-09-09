@@ -10,9 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     
     var ideaz = [
-        Ideaz(title: "app ideas app", isEvaluated: false, image: "fotiyukle.png", description: "App that can hold app ideas..."),
-        Ideaz(title: "only sum calculator", isEvaluated: false, image: "fotiyukle.png", description: "takes 2 numbers and bum"),
-        Ideaz(title: "sayginlik kazanilacak", isEvaluated: false, image: "rcpivdk.png", description: "3")
+        Ideaz(title: "app ideas app", isEvaluated: false, image: "1", description: "App that can hold app ideas..."),
+        Ideaz(title: "only sum calculator", isEvaluated: false, image: "fotiyukle", description: "takes 2 numbers and bum"),
+        Ideaz(title: "sayginlik kazanilacak", isEvaluated: false, image: "rcpivdk", description: "3")
     ]
 
     @IBOutlet weak var tableView: UITableView!
@@ -66,7 +66,7 @@ extension ViewController: UITableViewDataSource { //bunu ezberle
     //DTsource metodlari ornekler
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-      if editingStyle == .delete { //silmek
+      if editingStyle == .delete { //
         ideaz.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
       }
@@ -87,7 +87,7 @@ extension ViewController: CheckTableViewCellDelegate {
       return
     }
     let idea = ideaz[indexPath.row]
-    let newIdea = Ideaz(title: idea.title, isEvaluated: checked, image: "",description: "")  // tut
+      let newIdea = Ideaz(title: idea.title, isEvaluated: checked, image: idea.image,description: idea.description)  // tut
     
     ideaz[indexPath.row] = newIdea
   }

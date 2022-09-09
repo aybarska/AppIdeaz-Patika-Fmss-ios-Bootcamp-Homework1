@@ -26,6 +26,7 @@ class ChecckTableViewCell: UITableViewCell {
     
     func set(title: String, checked: Bool) {
       label.text = title
+    
       set(checked: checked)
     }
     
