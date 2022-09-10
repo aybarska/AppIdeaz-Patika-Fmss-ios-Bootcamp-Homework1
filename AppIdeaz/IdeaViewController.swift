@@ -16,9 +16,8 @@ class IdeaViewController: UIViewController {
     @IBOutlet weak var textfield: UITextField!
     @IBOutlet weak var checkbox22: Checkbox!
     @IBOutlet weak var Description: UITextField!
-  
     
-   // @IBOutlet weak var ideaImage: UIImageView!
+   // @IBOutlet weak var ideaImage: UIImageView! 
     
     var idea: Ideaz?
     weak var delegate: IdeaViewControllerDelegate?
