@@ -10,9 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     
     var ideaz = [
-        Ideaz(title: "app ideas app", isEvaluated: false, image: "1", description: "App that can hold app ideas..."),
-        Ideaz(title: "only sum calculator", isEvaluated: false, image: "fotiyukle", description: "takes 2 numbers and bum"),
-        Ideaz(title: "sayginlik kazanilacak", isEvaluated: false, image: "rcpivdk", description: "3")
+        Ideaz(title: "app ideas app", isEvaluated: true, image: "1", description: "App that can hold app ideas..."),
+        Ideaz(title: "only sum calculator", isEvaluated: false, image: "metamoonnft", description: "takes 2 numbers and bum"),
+        Ideaz(title: "sayginlik kazanilacak", isEvaluated: false, image: "SorgulApp", description: "3")
     ]
 
     @IBOutlet weak var tableView: UITableView!
@@ -107,7 +107,7 @@ extension ViewController: UITableViewDelegate {
           
           complete(true)
           
-          print("kaydir ciz")
+        //  print("kaydir ciz")
     }
         return UISwipeActionsConfiguration(actions: [action])
   

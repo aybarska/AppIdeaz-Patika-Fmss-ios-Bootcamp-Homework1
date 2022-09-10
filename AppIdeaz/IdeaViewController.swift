@@ -16,7 +16,9 @@ class IdeaViewController: UIViewController {
     @IBOutlet weak var textfield: UITextField!
     @IBOutlet weak var checkbox22: Checkbox!
     @IBOutlet weak var Description: UITextField!
-   // @IBOutlet weak var uploadedImage: UIImageView!
+  
+    
+   // @IBOutlet weak var ideaImage: UIImageView!
     
     var idea: Ideaz?
     weak var delegate: IdeaViewControllerDelegate?
@@ -28,7 +30,8 @@ class IdeaViewController: UIViewController {
         textfield.text = idea?.title
         checkbox22.checked = idea?.isEvaluated ?? false//bu niye forced derste sorulacak
         Description.text = idea?.description
-        //uploadedImage.image = UIImage(named: idea?.image ?? "1")
+      //  ideaImage.image  = UIImage(named: idea?.image ?? "1")
+      
        // print(idea!.isEvaluated) //geliyr
        // print(checkbox22.checked) //dogru
 
