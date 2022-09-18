@@ -23,23 +23,6 @@ and run with Xcode
 ```
     
 
-## Features
-
-- Check completed ideas(swipe right)
-- Edit ideas by tapping title
-- Delete bad ones 😑(swipe left)
-- Use edit mode for reorder ideas 
-
-
-## Installation
-
-Clone, Download the Repository
-
-```bash
-and run with Xcode
-```
-    
-
 ## Screenshots
 
 <p align="center">
